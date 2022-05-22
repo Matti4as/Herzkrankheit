@@ -692,9 +692,9 @@ row3_col1.subheader("Wo befindet sich Ihr Risiko im Vergleich?")
 def Ranking_Function():
     z = berechneHeartDisease()
     x = Log_Reg.predict_proba(xTest).copy() #Diese Linie ist wo die Probleme passieren!
-    x = x.values.tolist()
+    y = x.values.tolist()
     solution = []
-    for i in x:
+    for i in y:
       solution += i
     solution = sorted(solution)
     fancy_df = pd.DataFrame(solution, columns = ['Probability_1'])
