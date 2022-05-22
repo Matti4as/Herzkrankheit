@@ -691,7 +691,7 @@ row3_col1.subheader("Wo befindet sich Ihr Risiko im Vergleich?")
 
 def Ranking_Function():
     z = berechneHeartDisease()
-    x = Log_Reg.predict_proba(xTest).copy() #Diese Linie ist wo die Probleme passieren!
+    x = Log_Reg.predict_proba(xTest) #Diese Linie ist wo die Probleme passieren!
     x = x.values.tolist()
     solution = []
     for i in x:
